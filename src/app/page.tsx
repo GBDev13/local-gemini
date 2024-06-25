@@ -64,8 +64,6 @@ Browser not supported. Please use the latest version of Chrome Canary and follow
           return;
         }
 
-        console.log("start", prompt);
-
         setIsLoading(true);
 
         const session = await window.ai.createTextSession();
@@ -75,8 +73,6 @@ Browser not supported. Please use the latest version of Chrome Canary and follow
         const answer = await session.prompt(parsedPrompt);
 
         setResponse(answer);
-
-        console.log("end", answer);
 
         session.destroy();
       } catch (error) {
